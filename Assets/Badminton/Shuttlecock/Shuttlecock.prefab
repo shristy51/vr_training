@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8884902406655102866}
   - component: {fileID: 8347815661253333101}
   m_Layer: 8
-  m_Name: ball
+  m_Name: Cork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   t: 0
   velocity: 0.5
   curveTowards: {x: 0, y: 0, z: 0}
-  endPoint: {x: 0, y: 0, z: 0}
+  Obj1: {fileID: 0}
 --- !u!1 &5645202745922127642
 GameObject:
   m_ObjectHideFlags: 0
