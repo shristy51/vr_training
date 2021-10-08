@@ -25,6 +25,12 @@
 
 # Visual Studio cache directory
 .vs/
+.vsconfig
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
 
 # Gradle cache directory
 .gradle/
