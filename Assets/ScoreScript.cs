@@ -3,16 +3,10 @@ using UnityEngine;
 
 public class ScoreScript : MonoBehaviour
 {
-    public int gameScore = 0;
-
-    private void OnCollisionEnter(UnityEngine.Collision collision)
+    public int score;
+    public void OnTriggerEnter(Collider other)
     {
-
-        if (collision.gameObject.name == "Shuttlecock")
-        {
-            gameScore += 1;
-        }
+        score += 1;
     }
-
 
 }
