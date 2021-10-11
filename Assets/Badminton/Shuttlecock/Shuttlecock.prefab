@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223900789811132565}
-  - component: {fileID: 1149764959484713223}
+  - component: {fileID: 3119815486625905518}
   m_Layer: 8
   m_Name: Shuttlecock
   m_TagString: Untagged
@@ -128,7 +128,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1149764959484713223
+--- !u!114 &3119815486625905518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,13 +137,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3216416862529810537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfab3f7dfba7a47b09d0242c384b7f88, type: 3}
+  m_Script: {fileID: 11500000, guid: 63aed7912512845cc93a7e33e5a201d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   t: 0
-  velocity: 0.5
-  curveTowards: {x: 0, y: 0, z: 0}
-  Obj1: {fileID: 0}
+  velocity: 0.2
+  controlPoints:
+  - {fileID: 0}
+  - {fileID: 824383608838713476, guid: 22c06f6bc75aaed4492c211ddb682b93, type: 3}
+  - {fileID: 7636610525661189524, guid: 22686aaffe79b5a49b30c40bb1a4a51c, type: 3}
+  - {fileID: 919132149155446097, guid: 23f235558e3da437a86b09f3d39f3118, type: 3}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  width: 0.2
+  numberOfPoints: 20
 --- !u!1 &5645202745922127642
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +162,6 @@ GameObject:
   - component: {fileID: 8927350245969141390}
   - component: {fileID: 1950381263499889468}
   - component: {fileID: 3084355812857329276}
-  - component: {fileID: 4066130464104121543}
   m_Layer: 8
   m_Name: Cone
   m_TagString: Untagged
@@ -1110,18 +1115,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5645202745922127642}
-  m_Mesh: {fileID: 0}
---- !u!64 &4066130464104121543
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645202745922127642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
