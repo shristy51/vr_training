@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class ScoreScript : MonoBehaviour
 {
-    public int score;
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collision)
     {
-        score += 1;
+        Destroy(collision.gameObject);
     }
 
 }

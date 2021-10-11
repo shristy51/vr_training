@@ -17,9 +17,4 @@ public class ShuttlePhysics : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        Object.Destroy(this);
-    }
-
 }
