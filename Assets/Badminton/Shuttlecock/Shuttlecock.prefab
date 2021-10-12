@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8001321648570200352}
   - component: {fileID: 4693528762489693096}
   - component: {fileID: 8884902406655102866}
-  - component: {fileID: 8347815661253333101}
   m_Layer: 8
   m_Name: Cork
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8347815661253333101
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619720064426355404}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3216416862529810537
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223900789811132565}
   - component: {fileID: 3119815486625905518}
+  - component: {fileID: 536512968695615385}
   m_Layer: 8
   m_Name: Shuttlecock
   m_TagString: Untagged
@@ -141,15 +128,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: 0
-  velocity: 0.2
-  controlPoints:
-  - {fileID: 0}
-  - {fileID: 824383608838713476, guid: 22c06f6bc75aaed4492c211ddb682b93, type: 3}
-  - {fileID: 7636610525661189524, guid: 22686aaffe79b5a49b30c40bb1a4a51c, type: 3}
-  - {fileID: 919132149155446097, guid: 23f235558e3da437a86b09f3d39f3118, type: 3}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  width: 0.2
-  numberOfPoints: 20
+  End: {x: 0, y: 0, z: 0}
+--- !u!65 &536512968695615385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216416862529810537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03478836, y: 0.06728032, z: 0.04857967}
+  m_Center: {x: -0.024664683, y: 0.07356213, z: 0.0072202347}
 --- !u!1 &5645202745922127642
 GameObject:
   m_ObjectHideFlags: 0
