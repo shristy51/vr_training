@@ -30,6 +30,7 @@ public class ScoreScript : MonoBehaviour
         {
             yield return delay;
             SendHaptics();
+            hit_bool = false;
         }
     }
      
