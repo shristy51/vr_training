@@ -15,8 +15,9 @@ public class Spawner : MonoBehaviour
     IEnumerator Spawn() {
         while (true)
         {
+
             GameObject.Instantiate(mPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(5.0f);
         }
     }
 }
