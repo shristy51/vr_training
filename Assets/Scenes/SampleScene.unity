@@ -636,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41291b95d6cc44d5a91e560f69440083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!4 &646996890
 Transform:
   m_ObjectHideFlags: 0
@@ -1236,10 +1237,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
 --- !u!1 &1460384623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364076815127437966, guid: 23f235558e3da437a86b09f3d39f3118, type: 3}
@@ -1257,6 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41291b95d6cc44d5a91e560f69440083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1577749887}
 --- !u!65 &1460384625
 BoxCollider:
   m_ObjectHideFlags: 0
