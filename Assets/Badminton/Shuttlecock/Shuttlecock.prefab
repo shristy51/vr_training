@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8001321648570200352}
   - component: {fileID: 4693528762489693096}
   - component: {fileID: 8884902406655102866}
-  - component: {fileID: 8347815661253333101}
   m_Layer: 8
   m_Name: Cork
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8347815661253333101
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619720064426355404}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3216416862529810537
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,8 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t: 0
   End: {x: 0, y: 0, z: 0}
---- !u!54 &-2576190186427978609
 Rigidbody:
+--- !u!65 &536512968695615385
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -159,6 +146,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03478836, y: 0.06728032, z: 0.04857967}
+  m_Center: {x: -0.024664683, y: 0.07356213, z: 0.0072202347}
 --- !u!1 &5645202745922127642
 GameObject:
   m_ObjectHideFlags: 0
