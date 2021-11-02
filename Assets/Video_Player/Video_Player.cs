@@ -11,7 +11,8 @@ public class Video_Player : MonoBehaviour
 
     // edit this in the inspector, and fill it with your video clips
     public List<VideoClip> playlist = new List<VideoClip>();
-
+	private Dictionary<string,double> release_time_dict = new Dictionary<string,double>();
+	public GameObject shuttle;
     // internal var, keeps track of whether there's another clip cued up
     VideoClip nextClip;
 
@@ -25,6 +26,8 @@ public class Video_Player : MonoBehaviour
         // setup an event to automatically call SwitchCams() when we finish playing
         activeCam.loopPointReached += SwitchCams;
         otherCam.loopPointReached += SwitchCams;
+		shuttle.SetActive(false);
+		release_time_dict.Add("shot_1",1.0f);
     }
 
     void Update()
@@ -48,6 +51,11 @@ public class Video_Player : MonoBehaviour
             activeCam.playbackSpeed = 1f;
             otherCam.playbackSpeed = 1f;
         }*/
+		
+		if(activeCam.time >= 1.0f)
+		{
+			shuttle.SetActive(true);
+		}
 
     }
 
