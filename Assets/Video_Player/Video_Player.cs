@@ -8,48 +8,80 @@ public class Video_Player : MonoBehaviour
     // to smoothly cut between two videos, we need two VideoPlayers
     // make sure you create two VideoPlayers and assign them in the Inspector
     public VideoPlayer activeCam, otherCam;
-
+	private int stf;
     // edit this in the inspector, and fill it with your video clips
     public List<VideoClip> playlist = new List<VideoClip>();
+	public List<GameObject> Shuttles = new List<GameObject>();
+	private Dictionary<int,GameObject> ShuttlesMap = new Dictionary<int,GameObject>();
+	private Dictionary<string,double> release_time_dict = new Dictionary<string,double>();
+	public GameObject shuttle;
 
     // internal var, keeps track of whether there's another clip cued up
     VideoClip nextClip;
-
+	private float Timer,delay;
     void Start()
     {
-        Shuffle(playlist);
+		stf =0;
+        Shuffle(playlist, Shuttles);
+	    for(int i=0;i<Shuttles.Count;i++)
+			Shuttles[i].SetActive(false);
+		for(int i=0;i<Shuttles.Count;i++)
+			Debug.Log(" " + playlist[i] + " " + Shuttles[i]);
         // play the first video in the playlist
         PrepareNextPlaylistClip();
         SwitchCams(activeCam);
-
+		Timer=0.0f; 
+		delay = 5.0f;
         // setup an event to automatically call SwitchCams() when we finish playing
         activeCam.loopPointReached += SwitchCams;
         otherCam.loopPointReached += SwitchCams;
+		//shuttle.SetActive(false);
+		release_time_dict.Add("shot_1",1.29f);
+		release_time_dict.Add("shot_2",1.24f);
+		release_time_dict.Add("shot_3",1.30f);
+		release_time_dict.Add("shot_4",1.51f);
+		release_time_dict.Add("shot_5",1.52f);
+		release_time_dict.Add("shot_6",1.72f);
+		release_time_dict.Add("shot_7",1.15f);
+		release_time_dict.Add("shot_8",1.24f);
+		release_time_dict.Add("shot_9",1.38f);
+		release_time_dict.Add("shot_10",1.37f);
+		release_time_dict.Add("shot_11",1.72f);
+		
+		
     }
 
     void Update()
     {
+			Timer += 1f * Time.deltaTime;
+			Debug.Log("current clip: " + activeCam.clip.name);
+			Debug.Log("shuttle; " + shuttle.name);
+			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 2.85f)
+			{
+				Debug.Log("start:"+activeCam.time);
+				shuttle.SetActive(true);
+			}
+			else
+				shuttle.SetActive(false);
+			if (playlist.Count == 0)
+				return;
+		if(Timer >= delay)
+		{
+			Timer=0.0f;
+			// when the current video is 0.1 seconds away from ending, prepare the next video clip on otherCam
+			if (nextClip == null && activeCam.time >= activeCam.clip.length - 0.1)
+			{
+				//shuttle.SetActive(false);
+				PrepareNextPlaylistClip();
 
-        if (playlist.Count == 0)
-            return;
-        // when the current video is 0.1 seconds away from ending, prepare the next video clip on otherCam
-        if (nextClip == null && activeCam.time >= activeCam.clip.length - 0.1)
-        {
-            PrepareNextPlaylistClip();
-        }
-
-        // FAST FORWARD CHEAT, hold down F to speed-up video
-        /*if ( Input.GetKey(KeyCode.F) ) {
-            Time.timeScale = 16f;
-            activeCam.playbackSpeed = 16f;
-            otherCam.playbackSpeed = 16f;
-        } else {
-            Time.timeScale = 1f;
-            activeCam.playbackSpeed = 1f;
-            otherCam.playbackSpeed = 1f;
-        }*/
+				
+			}
+		
+		}
 
     }
+	
+	
 
     // swaps the VideoPlayer references, so activeCam is always the active VideoPlayer
     void SwitchCams(VideoPlayer thisCam)
@@ -58,7 +90,7 @@ public class Video_Player : MonoBehaviour
         otherCam = thisCam;
         activeCam.targetCameraAlpha = 1f;
         otherCam.targetCameraAlpha = 0f;
-
+		
         Debug.Log("new clip: " + nextClip.name);
         nextClip = null;
     }
@@ -70,21 +102,28 @@ public class Video_Player : MonoBehaviour
         otherCam.clip = nextClip;
         otherCam.Play();
         playlist.RemoveAt(0);
-    }
-
+		shuttle = Shuttles[stf];
+		stf++;
+		}
 
 
     // randomize the video playlist
-    public static void Shuffle<T>(IList<T> playlist)
+    static void Shuffle<T>(IList<T> playlist, List<GameObject> Shuttles)
     {
+		GameObject stl;
         int n = playlist.Count;
-        while (n > 1)
+        while (n >= 1)
         {
             n--;
             int k = Random.Range(0, n);
             T value = playlist[k];
+			stl = Shuttles[k];
             playlist[k] = playlist[n];
+			Shuttles[k] = Shuttles[n];
             playlist[n] = value;
+			Shuttles[n] = stl;
+			
         }
+		
     }
 }
