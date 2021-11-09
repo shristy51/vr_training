@@ -25,6 +25,8 @@ public class Video_Player : MonoBehaviour
         Shuffle(playlist, Shuttles);
 	    for(int i=0;i<Shuttles.Count;i++)
 			Shuttles[i].SetActive(false);
+		for(int i=0;i<Shuttles.Count;i++)
+			Debug.Log(" " + playlist[i] + " " + Shuttles[i]);
         // play the first video in the playlist
         PrepareNextPlaylistClip();
         SwitchCams(activeCam);
@@ -34,11 +36,17 @@ public class Video_Player : MonoBehaviour
         activeCam.loopPointReached += SwitchCams;
         otherCam.loopPointReached += SwitchCams;
 		//shuttle.SetActive(false);
-		release_time_dict.Add("shot_1",1.0f);
-		release_time_dict.Add("shot_2",1.0f);
-		release_time_dict.Add("shot_3",1.0f);
-		release_time_dict.Add("shot_4",1.0f);
-		release_time_dict.Add("shot_5",1.0f);
+		release_time_dict.Add("shot_1",1.29f);
+		release_time_dict.Add("shot_2",1.24f);
+		release_time_dict.Add("shot_3",1.30f);
+		release_time_dict.Add("shot_4",1.51f);
+		release_time_dict.Add("shot_5",1.52f);
+		release_time_dict.Add("shot_6",1.72f);
+		release_time_dict.Add("shot_7",1.15f);
+		release_time_dict.Add("shot_8",1.24f);
+		release_time_dict.Add("shot_9",1.38f);
+		release_time_dict.Add("shot_10",1.37f);
+		release_time_dict.Add("shot_11",1.72f);
 		
 		
     }
@@ -48,7 +56,7 @@ public class Video_Player : MonoBehaviour
 			Timer += 1f * Time.deltaTime;
 			Debug.Log("current clip: " + activeCam.clip.name);
 			Debug.Log("shuttle; " + shuttle.name);
-			if(activeCam.time >= 1.0f && activeCam.time < 2.76f)
+			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 2.85f)
 			{
 				Debug.Log("start:"+activeCam.time);
 				shuttle.SetActive(true);
@@ -114,7 +122,8 @@ public class Video_Player : MonoBehaviour
 			Shuttles[k] = Shuttles[n];
             playlist[n] = value;
 			Shuttles[n] = stl;
-			Debug.Log("Count  " + playlist[n] + Shuttles[n]);
+			
         }
+		
     }
 }
