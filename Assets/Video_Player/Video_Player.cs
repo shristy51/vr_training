@@ -56,7 +56,7 @@ public class Video_Player : MonoBehaviour
 			Timer += 1f * Time.deltaTime;
 			Debug.Log("current clip: " + activeCam.clip.name);
 			Debug.Log("shuttle; " + shuttle.name);
-			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 2.85f)
+			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 3.1f)
 			{
 				Debug.Log("start:"+activeCam.time);
 				shuttle.SetActive(true);
