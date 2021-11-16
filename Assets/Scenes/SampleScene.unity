@@ -214,8 +214,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 8.716687, y: 8.171204, z: 8.948946}
+  m_Center: {x: -0.76291376, y: 0.3935145, z: -0.41010112}
 --- !u!23 &16501398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -837,8 +837,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 7.4513874, y: 7.64515, z: 9.895519}
+  m_Center: {x: 0.401419, y: 0.027835842, z: 0.87955487}
 --- !u!23 &488857731
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1261,8 +1261,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 10.057795, y: 10.465783, z: 11.111588}
+  m_Center: {x: 0.34817135, y: -0.35871193, z: 0.6076791}
 --- !u!23 &563605154
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1738,8 +1738,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 13.72856, y: 6.1459565, z: 23.576149}
+  m_Center: {x: 0.029486602, y: 2.5729768, z: -2.3419757}
 --- !u!23 &759696122
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1880,8 +1880,8 @@ MonoBehaviour:
       points:
       - {x: -2.962316, y: 2.4734082, z: 0.020870432}
       - {x: -1.5249277, y: 4.0634727, z: -0.57966423}
-      - {x: 2.4021358, y: 4.087079, z: -2.4876244}
-      - {x: 4.4112024, y: 0.5271133, z: -3.1869795}
+      - {x: 2.4021358, y: 4.087079, z: -1.8710954}
+      - {x: 4.4112024, y: 0.5271133, z: -2.5704505}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -1895,7 +1895,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -2007,8 +2007,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 9.567978, y: 6.087042, z: 10.233047}
+  m_Center: {x: -0.45760608, y: 0.56573784, z: -0.3013103}
 --- !u!23 &943969812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3569,7 +3569,7 @@ Transform:
   m_GameObject: {fileID: 1584397006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3, y: 0.751, z: 0.023}
-  m_LocalScale: {x: 0.10599287, y: 0.109509386, z: 0.08666442}
+  m_LocalScale: {x: 0.16168417, y: 0.12464359, z: 0.08666442}
   m_Children: []
   m_Father: {fileID: 526939253}
   m_RootOrder: 0
@@ -3628,8 +3628,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 11.35456, y: 6.2398024, z: 10.643051}
+  m_Center: {x: 1.143896, y: 2.6199012, z: 2.7876735}
 --- !u!23 &1584397012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4702,8 +4702,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 10.539136, y: 8.704843, z: 10.441192}
+  m_Center: {x: 0.20281677, y: 0.5375644, z: 0.22042242}
 --- !u!23 &2041606452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4856,8 +4856,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 8.449382, y: 8.228802, z: 10.544137}
+  m_Center: {x: 0.023232192, y: 0.2825862, z: 1.1734232}
 --- !u!23 &2071430647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5095,8 +5095,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3964267, y: 2.1239038, z: 4.765672}
-  m_Center: {x: 0.32534316, y: 0.5619518, z: 0.757899}
+  m_Size: {x: 6.13322, y: 6.7351723, z: 11.970062}
+  m_Center: {x: 0.39185044, y: 0.34977582, z: 0.026650844}
 --- !u!23 &2104322466
 MeshRenderer:
   m_ObjectHideFlags: 0
