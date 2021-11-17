@@ -21,21 +21,15 @@ public class Video_Player : MonoBehaviour
 	private float Timer,delay;
     void Start()
     {
+		
 		stf =0;
         Shuffle(playlist, Shuttles);
 	    for(int i=0;i<Shuttles.Count;i++)
 			Shuttles[i].SetActive(false);
+		
 		for(int i=0;i<Shuttles.Count;i++)
 			Debug.Log(" " + playlist[i] + " " + Shuttles[i]);
-        // play the first video in the playlist
-        PrepareNextPlaylistClip();
-        SwitchCams(activeCam);
-		Timer=0.0f; 
-		delay = 5.0f;
-        // setup an event to automatically call SwitchCams() when we finish playing
-        activeCam.loopPointReached += SwitchCams;
-        otherCam.loopPointReached += SwitchCams;
-		//shuttle.SetActive(false);
+		
 		release_time_dict.Add("shot_1",1.29f);
 		release_time_dict.Add("shot_2",1.24f);
 		release_time_dict.Add("shot_3",1.30f);
@@ -49,10 +43,22 @@ public class Video_Player : MonoBehaviour
 		release_time_dict.Add("shot_11",1.72f);
 		
 		
+        // play the first video in the playlist
+        PrepareNextPlaylistClip();
+        SwitchCams(activeCam);
+		Timer=0.0f; 
+		delay = 5.0f;
+        // setup an event to automatically call SwitchCams() when we finish playing
+        activeCam.loopPointReached += SwitchCams;
+        otherCam.loopPointReached += SwitchCams;
+
+
+		
     }
 
     void Update()
     {
+		Debug.Log("Update called " + Time.time);
 			Timer += 1f * Time.deltaTime;
 			Debug.Log("current clip: " + activeCam.clip.name);
 			//Debug.Log("shuttle; " + shuttle.name);
@@ -126,4 +132,12 @@ public class Video_Player : MonoBehaviour
         }
 		
     }
+	
+	IEnumerator start_delay()
+	{
+		Debug.Log("delaydelay " + Time.time);
+		yield return new WaitForSeconds(10);
+		yield return new WaitForSecondsRealtime(10f);
+		Debug.Log("exitdelaydelay "+Time.time);
+	}
 }

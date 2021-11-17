@@ -6,6 +6,7 @@ public class RacquetPhysics : MonoBehaviour
 {
 	static int score_counter=-1;
 	public List<GameObject> Score = new List<GameObject>();
+	public GameObject scorecard;
     private void OnTriggerEnter(Collider other)
 	{
 		GameObject shuttle = other.gameObject;
@@ -15,6 +16,7 @@ public class RacquetPhysics : MonoBehaviour
 		{
 			score_counter++;
 			//Score[score_counter]
+		    Score[score_counter].GetComponent<Renderer>().material.color = Color.green;
 			Debug.Log("Destroying " + other.gameObject);
 			
 		}
