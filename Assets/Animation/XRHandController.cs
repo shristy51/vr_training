@@ -35,14 +35,14 @@ public class XRHandController : MonoBehaviour
     {
         InputDeviceCharacteristics controllerCharacteristic = InputDeviceCharacteristics.HeldInHand | InputDeviceCharacteristics.Controller;
 
-        if (handType == HandType.Left)
-        {
-            controllerCharacteristic = controllerCharacteristic | InputDeviceCharacteristics.Left;
-        }
-        else
+        if (handType == HandType.Right)
         {
             controllerCharacteristic = controllerCharacteristic | InputDeviceCharacteristics.Right;
         }
+       // else
+       // {
+       //     controllerCharacteristic = controllerCharacteristic | InputDeviceCharacteristics.Left;
+       // }
 
         List<InputDevice> inputDevices = new List<InputDevice>();
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristic, inputDevices);

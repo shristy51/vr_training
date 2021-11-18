@@ -6,6 +6,7 @@ public class startscript : MonoBehaviour
 {
 	public GameObject go1;
 	public GameObject go2;
+	public GameObject uiCanvas;
 	
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,10 @@ public class startscript : MonoBehaviour
  IEnumerator start_delay()
 	{
 		Debug.Log("delaydelay " + Time.time);
-		yield return new WaitForSeconds(10);
+		uiCanvas.SetActive(false);
+		yield return new WaitForSeconds(15);
 		go1.SetActive(true);
 		go2.SetActive(true);
+		
 	}
 }
