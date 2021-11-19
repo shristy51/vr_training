@@ -9,6 +9,7 @@ public class Video_Player : MonoBehaviour
     // make sure you create two VideoPlayers and assign them in the Inspector
     public VideoPlayer activeCam, otherCam;
 	private int stf;
+	public GameObject uiExitCanvas;
     // edit this in the inspector, and fill it with your video clips
     public List<VideoClip> playlist = new List<VideoClip>();
 	public List<GameObject> Shuttles = new List<GameObject>();
@@ -63,14 +64,17 @@ public class Video_Player : MonoBehaviour
 			Debug.Log("current clip: " + activeCam.clip.name);
 			//Debug.Log("shuttle; " + shuttle.name);
 			
-			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 3.0f && shuttle)
+			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 3.5f && shuttle)
 			{
 				Debug.Log("start:"+activeCam.time);
 				shuttle.SetActive(true);
 			}
 			
-			if (playlist.Count == 0)
-				return;
+	if (playlist.Count == 0 && activeCam.time >= activeCam.clip.length - 0.1 )
+			    uiExitCanvas.SetActive(true);
+			
+			
+				
 		if(Timer >= delay)
 		{
 			Timer=0.0f;
@@ -84,6 +88,8 @@ public class Video_Player : MonoBehaviour
 			}
 		
 		}
+		
+		
 
     }
 	

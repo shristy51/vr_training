@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RacquetPhysics : MonoBehaviour
 {
-	static int score_counter=-1;
+	int score_counter=-1;
+
 	public List<GameObject> Score = new List<GameObject>();
 	public GameObject scorecard;
     private void OnTriggerEnter(Collider other)
