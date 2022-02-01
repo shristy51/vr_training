@@ -28,8 +28,8 @@ public class Video_Player : MonoBehaviour
 	    for(int i=0;i<Shuttles.Count;i++)
 			Shuttles[i].SetActive(false);
 		
-		for(int i=0;i<Shuttles.Count;i++)
-			Debug.Log(" " + playlist[i] + " " + Shuttles[i]);
+		//for(int i=0;i<Shuttles.Count;i++)
+		//	Debug.Log(" " + playlist[i] + " " + Shuttles[i]);
 		
 		release_time_dict.Add("shot_1",1.29f);
 		release_time_dict.Add("shot_2",1.24f);
@@ -59,14 +59,14 @@ public class Video_Player : MonoBehaviour
 
     void Update()
     {
-		Debug.Log("Update called " + Time.time);
+		//Debug.Log("Update called " + Time.time);
 			Timer += 1f * Time.deltaTime;
-			Debug.Log("current clip: " + activeCam.clip.name);
+			//Debug.Log("current clip: " + activeCam.clip.name);
 			//Debug.Log("shuttle; " + shuttle.name);
 			
 			if(activeCam.time >= release_time_dict[activeCam.clip.name] && activeCam.time < 3.5f && shuttle)
 			{
-				Debug.Log("start:"+activeCam.time);
+				//Debug.Log("start:"+activeCam.time);
 				shuttle.SetActive(true);
 			}
 			
@@ -141,9 +141,9 @@ public class Video_Player : MonoBehaviour
 	
 	IEnumerator start_delay()
 	{
-		Debug.Log("delaydelay " + Time.time);
+		//Debug.Log("delaydelay " + Time.time);
 		yield return new WaitForSeconds(10);
 		yield return new WaitForSecondsRealtime(10f);
-		Debug.Log("exitdelaydelay "+Time.time);
+		//Debug.Log("exitdelaydelay "+Time.time);
 	}
 }

@@ -18,7 +18,7 @@ public class startscript : MonoBehaviour
  public IEnumerator start_delay()
 	{
 		Debug.Log("delaydelay " + Time.time);
-		yield return new WaitForSeconds(11);
+		yield return new WaitForSeconds(7);
 		go1.SetActive(true);
 		go2.SetActive(true);
 		

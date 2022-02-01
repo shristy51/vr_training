@@ -53,7 +53,7 @@ namespace PathCreation.Utility {
             Vector3 tangent = EvaluateCurveDerivative (a1, c1, c2, a2, t);
             Vector3 nextTangent = EvaluateCurveSecondDerivative (a1, c1, c2, a2, t);
             Vector3 c = Vector3.Cross (nextTangent, tangent);
-            return Vector3.Cross (c, tangent).normalized;
+			return Vector3.Cross (c, tangent).normalized;
         }
 
         public static Bounds CalculateSegmentBounds (Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3) {
